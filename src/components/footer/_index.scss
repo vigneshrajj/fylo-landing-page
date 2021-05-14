@@ -1,0 +1,65 @@
+.footer-container{
+  padding: 250px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .logo{
+    object-fit: contain;
+    width: 100px;
+  }
+  & > div{
+    display: flex;
+    margin: 20px 0;
+    &.phone-email{
+      flex-direction: column;
+    }
+    .phone-item{
+      display: flex;
+      margin: 10px 0;
+    }
+    img{
+      width: 20px;
+      object-fit: contain;
+      margin-right: 10px;
+      align-self: flex-start;
+      margin-top: 5px;
+    }
+    p{
+      flex: 4;
+      text-align: left;
+    }
+    &.other-links{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      a{
+        text-decoration: none;
+        margin: 10px 0;
+      }
+    }
+  }
+  @media screen and (min-width: $mobile-breakpoint + 1){
+    display: grid;
+    grid-template-columns: 40% 25% 25% 20%;
+    .logo{
+      grid-column: 1/5;
+      width: 200px;
+    }
+    & > div{
+      .location-content{
+        flex: none;
+        width: 350px;
+      }
+      .phone-item{
+        margin: 0;
+        margin-bottom: 10px;
+      }
+      &.other-links{
+        a{
+          margin: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

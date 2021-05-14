@@ -1,0 +1,25 @@
+@import '_variables.scss';
+@import 'components/header';
+@import 'components/getstarted';
+@import 'components/features';
+@import 'components/testimonial';
+@import 'components/earlyaccess';
+@import 'components/footer';
+*{
+  margin: 0;
+  color: white;
+  font-family: $body-font;
+  text-align: center;
+}
+.App {
+  font-family: sans-serif;
+  & > div {
+    background: $main-bg-clr;
+  }
+  & > div:nth-child(1), & > div:nth-child(2) {
+    background: $into-bg-clr;
+  }
+  & > div:last-child {
+    background: $footer-bg-clr;
+  }
+}
